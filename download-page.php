@@ -1,31 +1,31 @@
 <?php
     // for command line use; parse_str($_SERVER['QUERY_STRING'], $_GET);
     date_default_timezone_set('UTC');
-    $valid_pages = [
-        'nqp' => [
+    $valid_pages = array(
+        'nqp' => array(
             'id'   => 'nqp',
             'name' => 'NQP (Not Quite Perl) Compiler Toolkit',
             'path' => 'downloads/nqp/',
-            'vars' => ['.tar.gz' => null]
-        ],
-        'rakudo' => [
+            'vars' => array('.tar.gz' => null)
+        ),
+        'rakudo' => array(
             'id'   => 'rakudo',
             'name' => 'Rakudo Perl 6 Compiler',
             'path' => 'downloads/rakudo/',
-            'vars' => ['.tar.gz' => null]
-        ],
-        'star' => [
+            'vars' => array('.tar.gz' => null)
+        ),
+        'star' => array(
             'id'   => 'rakudo-star',
             'name' => 'Rakudo Star Perl 6 Distribution',
             'path' => 'downloads/star/',
-            'vars' => [
+            'vars' => array(
                 '.tar.gz'           => null,
                 '.dmg'             => null,
                 '-x86_64 (JIT).msi' => null,
                 '-x86 (no JIT).msi' => null
-            ]
-        ]
-    ];
+            )
+        )
+    );
 
     $give_latest = array_key_exists('latest', $_GET) ? $_GET['latest'] : null;
     $asset = array_key_exists('asset', $_GET) ? (
