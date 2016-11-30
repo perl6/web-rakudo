@@ -35,15 +35,15 @@ h2 {
 
 .sig {
     font-size: 60%;
-    background: #444;
-    color: #f0f0f0;
+    background: #ccc;
+    color: #444;
     border-radius: 3px;
     display: inline-block;
     text-decoration: none;
     padding: 3px 6px;
 }
 .sig:hover {
-    background: #888;
+    background: #ddd;
 }
 
 #perma-latest {
