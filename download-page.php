@@ -49,10 +49,13 @@
         return ' <a href="/' . $sig . '" class="sig">PGP</a>';
     }
 
-    $files = array_reverse(glob(
-        $asset['path'] . '*.{msi,dmg,tar.gz,zip}',
-        GLOB_BRACE
-    ));
+    $files = array();
+    foreach (glob($asset['path'] . '*') as $file) {
+        $info = pathinfo($file);
+        if ($info["extension"] == "asc") { continue; }
+        array_unshift($files, $file);
+    }
+
     foreach (array_keys($asset['vars']) as $variant) {
         foreach ($files as $file) {
             if ( substr($file, -strlen($variant)) !== $variant ) {
