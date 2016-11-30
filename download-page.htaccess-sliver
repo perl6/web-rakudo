@@ -1,0 +1,18 @@
+# This is part of .htaccess file relevant to download-page.php script. Add it to the actual file
+
+# Rewrite to Downloads page display script
+RewriteRule ^downloads/star/?$   /download-page.php?asset=star   [L,PT,QSA]
+RewriteRule ^downloads/nqp/?$    /download-page.php?asset=nqp    [L,PT,QSA]
+RewriteRule ^downloads/rakudo/?$ /download-page.php?asset=rakudo [L,PT,QSA]
+
+### Pretty URLs for perma links to latest releases
+# Star
+Redirect 303 /downloads/star/rakudo-star-latest.tar.gz /download-page.php?asset=star&latest=.tar.gz
+Redirect 303 /downloads/star/rakudo-star-latest.dmg /download-page.php?asset=star&latest=.dmg
+Redirect 303 "/downloads/star/rakudo-star-latest-x86_64 (JIT).msi" /download-page.php?asset=star&latest=-x86_64%20(JIT).msi
+Redirect 303 "/downloads/star/rakudo-star-latest-x86 (no JIT).msi" /download-page.php?asset=star&latest=-x86%20(no%20JIT).msi
+# Rakudo
+Redirect 303 /downloads/rakudo/rakudo-latest.tar.gz /download-page.php?asset=nqp&latest=.tar.gz
+# NQP
+Redirect 303 /downloads/nqp/nqp-latest.tar.gz /download-page.php?asset=nqp&latest=.tar.gz
+
