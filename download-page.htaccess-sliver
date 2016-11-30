@@ -12,7 +12,7 @@ Redirect 303 /downloads/star/rakudo-star-latest.dmg http://rakudo.org/download-p
 Redirect 303 "/downloads/star/rakudo-star-latest-x86_64 (JIT).msi" http://rakudo.org/download-page.php?asset=star&latest=-x86_64%20(JIT).msi
 Redirect 303 "/downloads/star/rakudo-star-latest-x86 (no JIT).msi" http://rakudo.org/download-page.php?asset=star&latest=-x86%20(no%20JIT).msi
 # Rakudo
-Redirect 303 /downloads/rakudo/rakudo-latest.tar.gz http://rakudo.org/download-page.php?asset=nqp&latest=.tar.gz
+Redirect 303 /downloads/rakudo/rakudo-latest.tar.gz http://rakudo.org/download-page.php?asset=rakudo&latest=.tar.gz
 # NQP
 Redirect 303 /downloads/nqp/nqp-latest.tar.gz http://rakudo.org/download-page.php?asset=nqp&latest=.tar.gz
 
