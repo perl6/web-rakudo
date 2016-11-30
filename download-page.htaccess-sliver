@@ -7,12 +7,12 @@ RewriteRule ^downloads/rakudo/?$ /download-page.php?asset=rakudo [L,PT,QSA]
 
 ### Pretty URLs for perma links to latest releases
 # Star
-Redirect 303 /downloads/star/rakudo-star-latest.tar.gz /download-page.php?asset=star&latest=.tar.gz
-Redirect 303 /downloads/star/rakudo-star-latest.dmg /download-page.php?asset=star&latest=.dmg
-Redirect 303 "/downloads/star/rakudo-star-latest-x86_64 (JIT).msi" /download-page.php?asset=star&latest=-x86_64%20(JIT).msi
-Redirect 303 "/downloads/star/rakudo-star-latest-x86 (no JIT).msi" /download-page.php?asset=star&latest=-x86%20(no%20JIT).msi
+Redirect 303 /downloads/star/rakudo-star-latest.tar.gz http://rakudo.org/download-page.php?asset=star&latest=.tar.gz
+Redirect 303 /downloads/star/rakudo-star-latest.dmg http://rakudo.org/download-page.php?asset=star&latest=.dmg
+Redirect 303 "/downloads/star/rakudo-star-latest-x86_64 (JIT).msi" http://rakudo.org/download-page.php?asset=star&latest=-x86_64%20(JIT).msi
+Redirect 303 "/downloads/star/rakudo-star-latest-x86 (no JIT).msi" http://rakudo.org/download-page.php?asset=star&latest=-x86%20(no%20JIT).msi
 # Rakudo
-Redirect 303 /downloads/rakudo/rakudo-latest.tar.gz /download-page.php?asset=nqp&latest=.tar.gz
+Redirect 303 /downloads/rakudo/rakudo-latest.tar.gz http://rakudo.org/download-page.php?asset=nqp&latest=.tar.gz
 # NQP
-Redirect 303 /downloads/nqp/nqp-latest.tar.gz /download-page.php?asset=nqp&latest=.tar.gz
+Redirect 303 /downloads/nqp/nqp-latest.tar.gz http://rakudo.org/download-page.php?asset=nqp&latest=.tar.gz
 
