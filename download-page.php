@@ -1,5 +1,5 @@
 <?php
-    parse_str($_SERVER['QUERY_STRING'], $_GET);
+    // for command line use; parse_str($_SERVER['QUERY_STRING'], $_GET);
     date_default_timezone_set('UTC');
     $valid_pages = [
         'nqp' => [
