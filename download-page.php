@@ -50,10 +50,27 @@
     }
 
     $files = array();
+    $point_releases = array();
     foreach (glob($asset['path'] . '*') as $file) {
         $info = pathinfo($file);
         if ($info["extension"] == "asc") { continue; }
-        array_unshift($files, $file);
+
+        # Fix for point release sorting. We keep point releases in a separate
+        # Place and then prepend them to our list of files once we see a
+        # non-point release
+        if (preg_match('/[0-9]{4}\.[0-9]{2}\.[0-9]/', $info["basename"])) {
+            array_unshift($point_releases, $file);
+        }
+        else {
+            array_unshift($files, $file);
+            if ($point_releases) {
+                $files = array_merge($point_releases, $files);
+                $point_releases = array();
+            }
+        }
+    }
+    if ($point_releases) {
+        $files = array_merge($point_releases, $files);
     }
 
     foreach (array_keys($asset['vars']) as $variant) {
